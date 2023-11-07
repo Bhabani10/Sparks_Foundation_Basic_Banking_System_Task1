@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Customer</title>
+</head>
+<body class="customers">
+  <div>
+    <nav>
+      <div class="navbar">
+          <div class="logoname">
+          <img src="assets\logo.png" alt="logo">
+          <h3><a href="index.html">BiGo Banking</a></h3>
+          </div>
+
+          <div class="menuitem">
+                      <ul class="menuitems">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="viewcustomer.html">Customer </a></li>
+                          <li><a href="about.html">About</a></li>
+                      </ul>
+          </div>
+      </div>
+  </nav>
+  </div>
+
+    <div class="container">
+        <div id="negative" class="negativemsg">
+          <div class="header1">
+            <i id="red1" class="ri-error-warning-line">Low Balance!!</i>
+            <i id="red2" class="ri-close-line"  onclick="cancel('negative')"></i>
+          </div>
+          
+        </div>
+        <div id="positive" class="positivemsg" >
+          <div class="header1">
+            <i id="green1" class="ri-check-line">Success!! The amount has been transfered</i>
+            <i id="green2" class="ri-close-line" onclick="cancel('positive')"></i>
+          </div>
+          
+        </div>
+        <!-- button-upload -->
+          <div class="uibuttons">
+            <button class="sendbutton" onclick="displayForm()"><span class="text">Send Money</span></button>
+            <div class="or"></div>
+            <button class="checkbutton" onclick="checkBalance()"><span class="text">check Balance</span></button>
+          </div>
+          <!--  for check balance -->
+          <div class="checkBalance" id="checkBalance">
+            <h1 class="checkBalanceheader">
+              <img src="assets\corporate-user-icon.png">
+              <br>
+              Hello Bhabani
+            </h1>
+            <div>
+              <h3>Current Balance: ₹<span id="total">0</span></h3>  
+            </div>
+          </div>
+          <!-- Transfer -->
+          <div class="transfer" id="transfer">
+            <form class="form">
+              <div class="field">
+                <div class="twofields">
+                  <div class="field1">
+                    <label>Customer Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter name here">
+                  </div>
+                  <div class="field1">
+                    <label>Amount</label>
+                    <input id="amount" name="amount" type="number" placeholder="Enter Amount">
+                  </div>
+                </div>
+              </div>  
+            </form>
+            <button id="buttons" class="greenbutton" type="submit" onclick="sendData()">Transfer</button>
+            <button id="buttons" class="redbutton" onclick="cancel('transfer')">Cancel</button>  
+          </div>
+          <!-- Customers -->
+          <table class="wrap-table100">
+            <thead >
+              <tr class="table100-head">
+              <th class="column1">Name</th>
+              <th class="column2">Email</th>
+              <th class="column3">Balance</th>
+            </tr></thead>
+            <tbody>
+              <tr>
+                <td class="column1" data-label="Name">
+                    <h4 class="ui image header">
+                        <img src="assets\male-icon.png" class="ui mini rounded image">
+                        <div class="content">
+                          Bhabani
+                        </div>
+                      </div>
+                    </h4>
+                </td>
+                <td class="column2">bhabani@gmail.com</td>
+                <td class="column3" id="Bhabani" data-label="balance">15000</td>
+              </tr>
+              <tr>
+                <td class="column1" data-label="Name">
+                    <h4 class="ui image header">
+                        <img src="assets\woman-icon.png" class="ui mini rounded image">
+                        <div class="content">
+                          Pradaayini
+                        </div>
+                      </div>
+                    </h4>
+                </td>
+                <td class="column2" data-label="Email">pradaayini@gmail.com</td>
+                <td class="column3" id="Pradaayini" data-label="balance">55000</td>
+              </tr>
+              <tr>
+                <td class="column1" data-label="Name">
+                    <h4 class="ui image header">
+                        <img src="assets\woman-icon.png" class="ui mini rounded image">
+                        <div class="content">
+                          Anoushka
+                        </div>
+                      </div>
+                    </h4>
+                </td>
+                <td class="column2" data-label="Email">Anoushka@gmail.com</td>
+                <td class="column3" id="Anoushka" data-label="balance">40000</td>
+              </tr>
+              <tr>
+                <td class="column1" data-label="Name">
+                    <h4 class="ui image header">
+                        <img src="assets\male-icon.png" class="ui mini rounded image">
+                        <div class="content">
+                          Fermi
+                        </div>
+                      </div>
+                    </h4>
+                </td>
+                <td class="column2" data-label="Email">youknowwhoiam@gmail.com</td>
+                <td class="column3" id="Fermi" data-label="balance">20000</td>
+              </tr>
+            </tbody>
+          </table>
+        
+    </div>
+    <footer class="footer">
+      <p><b>VisGo Banking @2023 All Rights Reserved </b></p>
+      <p>- Presented by Visfoliohub</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script> -->
+</body>
+</html>
