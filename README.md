@@ -2,6 +2,6 @@
 GRIP@ | Sparks Foundation | web development internship | Task-1 | Basic Banking system
 
 ### view my website at :
-https://Bigo-banking.netlify.app
+https://main--unique-medovik-75e9c6.netlify.app/
 
 
